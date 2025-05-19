@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif; /* Una fuente un poco más moderna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('imagenes/fondo_supercampeones.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding-left: 180px; /* Aumentamos el padding izquierdo para dar más espacio */
+    padding-right: 180px; /* Aumentamos el padding derecho para dar más espacio */
+}
+
+#bienvenida, #juego {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 40px; /* Un poco más de espacio interior */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    text-align: center;
+    max-width: calc(600px - 360px); /* Reducimos el ancho máximo */
+    width: calc(90% - 360px); /* Reducimos el ancho */
+}
+
+h1, h2 {
+    color: #e44d26; /* Un naranja vibrante, característico de Supercampeones */
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil en el texto */
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1em; /* Un tamaño de fuente ligeramente mayor */
+}
+
+button {
+    background-color: #29abe2; /* Un azul brillante */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Un poco más de padding */
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    font-size: 18px; /* Fuente más grande */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para más interactividad */
+    margin: 8px;
+}
+
+button:hover {
+    background-color: #248fbd; /* Un tono de azul más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Más espacio entre botones */
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.opciones button {
+    min-width: 180px; /* Botones de opciones más anchos */
+    font-weight: bold; /* Texto en negrita */
+}
+
+#resultado {
+    font-weight: bold;
+    margin-top: 30px;
+    color: #38c172; /* Un verde llamativo para el resultado */
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.opciones-final {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.opciones-final button {
+    background-color: #ffc107; /* Un amarillo para los botones finales */
+    color: #333; /* Texto oscuro para mejor contraste */
+}
+
+.opciones-final button:hover {
+    background-color: #e0a800; /* Tono más oscuro al pasar el ratón */
+}
+
+/* Estilos para la imagen del personaje al final */
+#juego img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#juego p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Estilos para los logos fijos */
+.logo-fijo {
+    max-height: 350px; /* Aumentamos la altura máxima de los logos */
+    height: auto;
+    
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.izquierda {
+    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.derecha {
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+}
+
+
+/* Estilos para el contenedor de bienvenida (ahora sin los logos) */
+.contenedor-bienvenida {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: calc(600px - 240px); /* Reduce el ancho máximo */
+    width: calc(90% - 240px); /* Reduce el ancho */
+}
+
+/* Estilos para el botón "Comenzar" (ahora directamente dentro de bienvenida) */
+#bienvenida button#boton-comenzar {
+    background-color: #29abe2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Añade un margen superior para separarlo del texto */
+}
+
+#bienvenida button#boton-comenzar:hover {
+    background-color: #248fbd;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
