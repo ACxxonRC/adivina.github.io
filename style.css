@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('imagenes/fondo_supercampeones.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('imagenes/fondo.png'); /* Reemplaza con la ruta de tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -15,7 +15,7 @@ body {
 
 #bienvenida, #juego {
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
-    padding: 40px; /* Un poco más de espacio interior */
+    padding: 30px; /* Un poco más de espacio interior */
     border-radius: 12px; /* Bordes más redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
     text-align: center;

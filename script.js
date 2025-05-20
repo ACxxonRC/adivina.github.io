@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { pregunta: '¿Tu personaje utiliza gorra?', opciones: ['sí', 'no'], propiedad: 'usaGorra' },
     { pregunta: '¿Tu personaje es moreno?', opciones: ['sí', 'no'], propiedad: 'esMoreno' },
     { pregunta: '¿Tu personaje tiene el pelo casi a rapa?', opciones: ['sí', 'no'], propiedad: 'peloRapado' },
+    { pregunta: '¿Tu personaje juega en el Newteam SC?', opciones: ['sí', 'no'], propiedad: 'equipo', valor: 'Newteam SC', tipo: 'equipo' },
+    { pregunta: '¿Tu personaje juega en el Muppet FC?', opciones: ['sí', 'no'], propiedad: 'equipo', valor: 'Muppet FC', tipo: 'equipo' },
     { pregunta: '¿Tu personaje juega en la defensa?', opciones: ['sí', 'no'], propiedad: 'posicion', valor: 'DF', tipo: 'posicion' },
     { pregunta: '¿Tu personaje juega en el mediocampo?', opciones: ['sí', 'no'], propiedad: 'posicion', valor: 'MD', tipo: 'posicion' },
     { pregunta: '¿Tu personaje juega como delantero?', opciones: ['sí', 'no'], propiedad: 'posicion', valor: 'DL', tipo: 'posicion' },
     { pregunta: '¿Tu personaje es portero?', opciones: ['sí', 'no'], propiedad: 'posicion', valor: 'P', tipo: 'posicion' },
-    { pregunta: '¿Tu personaje juega en el Newteam SC?', opciones: ['sí', 'no'], propiedad: 'equipo', valor: 'Newteam SC', tipo: 'equipo' },
-    { pregunta: '¿Tu personaje juega en el Muppet FC?', opciones: ['sí', 'no'], propiedad: 'equipo', valor: 'Muppet FC', tipo: 'equipo' },
     { pregunta: '¿Qué número tiene tu personaje?', obtenerOpciones: () => [...new Set(posiblesPersonajes.map(p => p.numero))].sort((a, b) => a - b).map(n => n.toString()), propiedad: 'numero', tipo: 'numero' }
 ];
 
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { nombre: 'Mark Lenders', numero: 10, posicion: 'DL', pelo: 'negro', equipo: 'Muppet FC', ojosCerrados: false, usaGorra: false, esMoreno: true, peloRapado: false, imagen: '/imagenes/jugadoresmuppet/Jugador10.png' },
         { nombre: 'Keith Coleman', numero: 11, posicion: 'DL', pelo: 'negro', equipo: 'Muppet FC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresmuppet/Jugador11.png' },
         { nombre: 'Danny Melow', numero: 15, posicion: 'MD', pelo: 'negro', equipo: 'Muppet FC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: true, imagen: '/imagenes/jugadoresmuppet/Jugador15.png' },
-        { nombre: 'Ed Warner', numero: 17, posicion: 'P', pelo: 'negro', equipo: 'Muppet FC', ojosCerrados: false, usaGorra: true, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador17.png' },
-        { nombre: 'Benji Price', numero: 1, posicion: 'P', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: true, usaGorra: true, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresmuppet/Jugador1.png' },
+        { nombre: 'Ed Warner', numero: 17, posicion: 'P', pelo: 'negro', equipo: 'Muppet FC', ojosCerrados: false, usaGorra: true, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresmuppet/jugador17.png' },
+        { nombre: 'Benji Price', numero: 1, posicion: 'P', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: true, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/Jugador1.png' },
         { nombre: 'Charlie Custer', numero: 2, posicion: 'DF', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador2.png' },
         { nombre: 'Jill Taylor', numero: 4, posicion: 'DF', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador4.png' },
         { nombre: 'Jack Morris', numero: 5, posicion: 'MD', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador5.png' },
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { nombre: 'Johnny', numero: 9, posicion: 'DL', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador9.png' },
         { nombre: 'Oliver Atom', numero: 10, posicion: 'DL', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador10.png' },
         { nombre: 'Tom Baker', numero: 11, posicion: 'MD', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: false, imagen: '/imagenes/jugadoresnewteam/jugador11.png' },
-        { nombre: 'Bruce Harper', numero: 14, posicion: 'DF', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: false, peloRapado: true, imagen: '/imagenes/jugadoresnewteam/jugador14.png' }
+        { nombre: 'Bruce Harper', numero: 14, posicion: 'DF', pelo: 'negro', equipo: 'Newteam SC', ojosCerrados: false, usaGorra: false, esMoreno: true, peloRapado: true, imagen: '/imagenes/jugadoresnewteam/jugador14.png' }
     ];
 }
 
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        opcionesDiv.addEventListener('click', (event) => {
+opcionesDiv.addEventListener('click', (event) => {
             if (event.target.tagName === 'BUTTON') {
                 const respuesta = event.target.dataset.respuesta;
                 resultadoDiv.textContent = `Has seleccionado: ${respuesta}`;
@@ -104,28 +104,42 @@ document.addEventListener('DOMContentLoaded', () => {
                         mostrarResultadoFinal(posiblesPersonajes[0]);
                     } else if (posiblesPersonajes.length > 1) {
                         const preguntaActual = preguntas[numeroPregunta];
-                        if (preguntaActual.tipo === 'equipo') {
-                            if (respuesta === 'sí') {
-                                numeroPregunta += 2;
-                            } else {
-                                numeroPregunta++;
-                            }
-                        } else if (preguntaActual.tipo === 'posicion') {
-                            if (respuesta === 'sí') {
-                                let indiceUltimaPosicion = numeroPregunta;
-                                while (indiceUltimaPosicion + 1 < preguntas.length && preguntas[indiceUltimaPosicion + 1].tipo === 'posicion') {
-                                    indiceUltimaPosicion++;
+                        let siguientePregunta = null; // Inicializamos siguientePregunta
+
+                        if (preguntaActual.tipo === 'posicion' && respuesta === 'sí') {
+                            // Buscar la siguiente pregunta de posición que no se haya hecho
+                            const posicionActual = preguntaActual.valor;
+                            siguientePregunta = preguntas.find((p, index) =>
+                                p.tipo === 'posicion' &&
+                                p.valor === posicionActual &&
+                                index > numeroPregunta && // Evitar repetir la misma pregunta inmediatamente
+                                !preguntasHechas.includes(p.propiedad)
+                            );
+
+                            // Si no hay otra pregunta específica de esta posición,
+                            // avanzamos al siguiente grupo de preguntas (evitando otras posiciones)
+                            if (!siguientePregunta) {
+                                let indiceSiguiente = numeroPregunta + 1;
+                                while (indiceSiguiente < preguntas.length && preguntas[indiceSiguiente].tipo === 'posicion') {
+                                    indiceSiguiente++;
                                 }
-                                numeroPregunta = indiceUltimaPosicion + 1;
-                            } else {
-                                numeroPregunta++;
+                                if (indiceSiguiente < preguntas.length) {
+                                    siguientePregunta = preguntas[indiceSiguiente];
+                                    numeroPregunta = indiceSiguiente; // Actualizamos numeroPregunta
+                                }
                             }
-                        } else {
-                            numeroPregunta++;
                         }
 
-                        if (numeroPregunta < preguntas.length) {
-                            const siguientePregunta = preguntas[numeroPregunta];
+                        // Si no se encontró una pregunta de posición específica o la respuesta fue 'no',
+                        // pasamos a la siguiente pregunta en el orden original
+                        if (!siguientePregunta) {
+                            numeroPregunta++;
+                            if (numeroPregunta < preguntas.length) {
+                                siguientePregunta = preguntas[numeroPregunta];
+                            }
+                        }
+
+                        if (siguientePregunta) {
                             const opcionesSiguiente = siguientePregunta.opciones || (siguientePregunta.obtenerOpciones ? siguientePregunta.obtenerOpciones() : ['sí', 'no']);
                             mostrarPregunta(siguientePregunta.pregunta, opcionesSiguiente);
                         } else {
@@ -170,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Posibles personajes después del filtro (pregunta ' + (numeroPregunta + 1) + '):', posiblesPersonajes);
         }
     }
-
+ 
     function mostrarResultadoFinal(personaje) {
     sonidoAcierto.play(); // Reproducir sonido al adivinar
     juegoDiv.innerHTML = `<h2>¡Creo que tu personaje es...</h2><h1>${personaje.nombre}</h1>`;
@@ -180,13 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
     imagenPersonaje.src = personaje.imagen;
     imagenPersonaje.alt = personaje.nombre; // Añadir texto alternativo por accesibilidad
     imagenPersonaje.style.maxWidth = '200px'; // O ajusta el tamaño como prefieras
-    imagenPersonaje.style.height = 'auto';
+    imagenPersonaje.style.height = '150px';
     juegoDiv.appendChild(imagenPersonaje);
 
     const detallesPersonaje = document.createElement('p');
     detallesPersonaje.textContent = `Número: ${personaje.numero}, Posición: ${personaje.posicion}, Equipo: ${personaje.equipo}`;
     juegoDiv.appendChild(detallesPersonaje);
-
+ 
     const opcionesFinalDiv = document.createElement('div');
     opcionesFinalDiv.classList.add('opciones-final');
 
@@ -199,12 +213,16 @@ document.addEventListener('DOMContentLoaded', () => {
     botonSeguirPreguntando.id = 'boton-seguir-preguntando';
     botonSeguirPreguntando.textContent = 'No es él / Seguir Preguntando';
     opcionesFinalDiv.appendChild(botonSeguirPreguntando);
-
+ 
     juegoDiv.appendChild(opcionesFinalDiv);
 
     botonVolverInicio.addEventListener('click', () => {
         musicaDeFondo.pause();
         musicaDeFondo.currentTime = 0;
+        musicaDeFondo.play().catch(error => {
+            console.error("Error al intentar reproducir la música de fondo:", error);
+            console.warn("Es posible que la reproducción automática de audio esté bloqueada por el navegador. El usuario deberá interactuar con la página para iniciar la música.");
+        });
         juegoDiv.style.display = 'none';
         bienvenidaDiv.style.display = 'block';
         iniciarJuego();
